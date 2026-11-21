@@ -1,3 +1,39 @@
 {
-  "version": "0.0.0"
+  "name": "@sss/sss-guis-smart-widgets-base",
+  "version": "0.1.0",
+  "description": "Event-aware widget base for SSS smart widgets",
+  "type": "module",
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src/**/*.ts",
+    "!src/**/*.test.ts"
+  ],
+  "sideEffects": [
+    "./src/smartWidget.ts",
+    "./src/sharedWorkerWidget.ts"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "test": "vitest run --reporter=verbose"
+  },
+  "author": "Bradley Marshall",
+  "license": "MIT",
+  "devDependencies": {
+    "@sss/sss-guis-eslint": "github:bradley499/sss-guis-eslint",
+    "eslint": "^9.0.0",
+    "happy-dom": "^20.10.2",
+    "jiti": "^2.7.0",
+    "typescript": "^6.0.3",
+    "vitest": "4.1.8"
+  },
+  "dependencies": {
+    "@sss/sss-guis": "https://github.com/bradley499/sss-guis/releases/download/v0.12.0/sss-guis-0.12.0.tgz",
+    "@sss/sss-guis-smart-widgets-common": "https://github.com/bradley499/sss-guis-smart-widgets-common/releases/download/v0.1.0/sss-guis-smart-widgets-common-0.1.0.tgz"
+  },
+  "overrides": {
+    "vite": "^7.3.8"
+  }
 }
